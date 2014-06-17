@@ -7,4 +7,4 @@ Completed all required sections
 Screenshot
 ==========
 
-!(/login.gif)
+![Image](login.gif)
