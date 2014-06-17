@@ -1,8 +1,8 @@
 CodePath-Login
 ==============
 
-Week two assignment
-Completed all required sections
+Week two assignment.
+Completed all required sections.
 
 Screenshot
 ==========
