@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewControler">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="activityIndicator" destination="5fF-jJ-gao" id="EJu-Bj-8sR"/>
+                <outlet property="emailField" destination="OLd-ST-I4J" id="fm7-Wi-fnO"/>
+                <outlet property="loginButton" destination="fF3-dw-DqZ" id="zyJ-WX-UYF"/>
+                <outlet property="loginForms" destination="5iz-9Y-zr8" id="Bkk-9u-TBY"/>
+                <outlet property="logo" destination="dqy-hy-hsk" id="xwk-wc-wzI"/>
+                <outlet property="passwordField" destination="cVr-3G-d3E" id="fPO-gI-5If"/>
+                <outlet property="signupLabel" destination="ndl-XJ-W7d" id="fiM-Jp-jqy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,9 +20,105 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dqy-hy-hsk">
+                    <rect key="frame" x="73" y="97" width="174" height="43"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5iz-9Y-zr8">
+                    <rect key="frame" x="0.0" y="210" width="320" height="173"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="form_bg" translatesAutoresizingMaskIntoConstraints="NO" id="XM0-9F-1Dr">
+                            <rect key="frame" x="2" y="-3" width="312" height="101"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OLd-ST-I4J">
+                            <rect key="frame" x="27" y="10" width="266" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fF3-dw-DqZ">
+                            <rect key="frame" x="12" y="101" width="293" height="52"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" backgroundImage="login_button_disabled">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="logging_in_button">
+                                <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="login_button_disabled"/>
+                            <connections>
+                                <action selector="login:" destination="-1" eventType="touchUpInside" id="TMz-mU-5bF"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVr-3G-d3E">
+                            <rect key="frame" x="27" y="50" width="266" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
+                        </textField>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="5fF-jJ-gao">
+                            <rect key="frame" x="268" y="117" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndl-XJ-W7d">
+                    <rect key="frame" x="76" y="449" width="171" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Sign Up For Facebook">
+                            <attributes>
+                                <color key="NSBackgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                <font key="NSOriginalFont" size="17" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaM-7n-ywX">
+                    <rect key="frame" x="76" y="496" width="171" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Help Center">
+                            <attributes>
+                                <color key="NSBackgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                <font key="NSOriginalFont" size="17" name="Helvetica"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.30820971727371216" green="0.42283889651298523" blue="0.67397868633270264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="ype-oS-C46" appends="YES" id="Fcq-kh-3dw"/>
+            </connections>
         </view>
+        <tapGestureRecognizer id="ype-oS-C46">
+            <connections>
+                <action selector="onTap:" destination="-1" id="Vfo-a4-qNr"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="form_bg" width="295" height="95"/>
+        <image name="logging_in_button" width="293" height="52"/>
+        <image name="login_button_disabled" width="293" height="52"/>
+        <image name="logo" width="174" height="43"/>
+    </resources>
 </document>

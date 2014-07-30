@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController">
             <connections>
+                <outlet property="actionBar" destination="rM7-Eg-fQt" id="SyP-8k-RTu"/>
+                <outlet property="activityIndicator" destination="641-UY-D1C" id="L9X-Eh-Wb7"/>
+                <outlet property="feedView" destination="641-UY-D1C" id="CK8-3U-KJN"/>
+                <outlet property="scrollView" destination="C63-kV-6om" id="A4K-yJ-n6z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,9 +17,42 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="H6A-D2-Ra7">
+                    <rect key="frame" x="150" y="274" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+                <scrollView hidden="YES" autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" alwaysBounceVertical="YES" id="C63-kV-6om">
+                    <rect key="frame" x="0.0" y="64" width="320" height="524"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rM7-Eg-fQt">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="status_bar">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" id="641-UY-D1C">
+                            <rect key="frame" x="0.0" y="45" width="320" height="1377"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86330020427703857" green="0.87131005525588989" blue="0.8900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                            <size key="value" width="320" height="1136"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.86330020427703857" green="0.87131005525588989" blue="0.8900001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="feed" width="320" height="1455"/>
+        <image name="status_bar" width="320" height="45"/>
+    </resources>
 </document>

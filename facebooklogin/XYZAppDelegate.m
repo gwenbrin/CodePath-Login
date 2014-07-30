@@ -7,6 +7,11 @@
 //
 
 #import "XYZAppDelegate.h"
+#import "FeedViewController.h"
+#import "LoginViewController.h"
+#import "MoreViewController.h"
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @implementation XYZAppDelegate
 
@@ -14,6 +19,12 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    LoginViewController *loginController = [[LoginViewController alloc] init];
+    self.window.rootViewController = loginController;
+    
+    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x4F6CAC)];
+     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

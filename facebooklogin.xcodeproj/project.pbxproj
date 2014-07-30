@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522F10C3195099EF0056ECD8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522F10C2195099EF0056ECD8 /* Images.xcassets */; };
+		522F10C71950AA7C0056ECD8 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F10C51950AA7C0056ECD8 /* MoreViewController.m */; };
+		522F10C81950AA7C0056ECD8 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 522F10C61950AA7C0056ECD8 /* MoreViewController.xib */; };
 		52B5C8F11950337C00449E97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B5C8F01950337C00449E97 /* Foundation.framework */; };
 		52B5C8F31950337C00449E97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B5C8F21950337C00449E97 /* CoreGraphics.framework */; };
 		52B5C8F51950337C00449E97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B5C8F41950337C00449E97 /* UIKit.framework */; };
 		52B5C8FB1950337C00449E97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52B5C8F91950337C00449E97 /* InfoPlist.strings */; };
 		52B5C8FD1950337C00449E97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B5C8FC1950337C00449E97 /* main.m */; };
 		52B5C9011950337C00449E97 /* XYZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B5C9001950337C00449E97 /* XYZAppDelegate.m */; };
-		52B5C9031950337C00449E97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B5C9021950337C00449E97 /* Images.xcassets */; };
 		52B5C90A1950337C00449E97 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B5C9091950337C00449E97 /* XCTest.framework */; };
 		52B5C90B1950337C00449E97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B5C8F01950337C00449E97 /* Foundation.framework */; };
 		52B5C90C1950337C00449E97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B5C8F41950337C00449E97 /* UIKit.framework */; };
 		52B5C9141950337C00449E97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52B5C9121950337C00449E97 /* InfoPlist.strings */; };
 		52B5C9161950337C00449E97 /* facebookloginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B5C9151950337C00449E97 /* facebookloginTests.m */; };
+		52B5C922195034FD00449E97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B5C920195034FD00449E97 /* LoginViewController.m */; };
+		52B5C923195034FD00449E97 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B5C921195034FD00449E97 /* LoginViewController.xib */; };
+		52B5C927195096E700449E97 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B5C925195096E700449E97 /* FeedViewController.m */; };
+		52B5C928195096E700449E97 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B5C926195096E700449E97 /* FeedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		522F10C2195099EF0056ECD8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		522F10C41950AA7C0056ECD8 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		522F10C51950AA7C0056ECD8 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		522F10C61950AA7C0056ECD8 /* MoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		52B5C8ED1950337C00449E97 /* facebooklogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = facebooklogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B5C8F01950337C00449E97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		52B5C8F21950337C00449E97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -42,12 +52,17 @@
 		52B5C8FE1950337C00449E97 /* facebooklogin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "facebooklogin-Prefix.pch"; sourceTree = "<group>"; };
 		52B5C8FF1950337C00449E97 /* XYZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZAppDelegate.h; sourceTree = "<group>"; };
 		52B5C9001950337C00449E97 /* XYZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZAppDelegate.m; sourceTree = "<group>"; };
-		52B5C9021950337C00449E97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		52B5C9081950337C00449E97 /* facebookloginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = facebookloginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B5C9091950337C00449E97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		52B5C9111950337C00449E97 /* facebookloginTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "facebookloginTests-Info.plist"; sourceTree = "<group>"; };
 		52B5C9131950337C00449E97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		52B5C9151950337C00449E97 /* facebookloginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = facebookloginTests.m; sourceTree = "<group>"; };
+		52B5C91F195034FD00449E97 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		52B5C920195034FD00449E97 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		52B5C921195034FD00449E97 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		52B5C924195096E700449E97 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		52B5C925195096E700449E97 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		52B5C926195096E700449E97 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +122,18 @@
 		52B5C8F61950337C00449E97 /* facebooklogin */ = {
 			isa = PBXGroup;
 			children = (
+				522F10C2195099EF0056ECD8 /* Images.xcassets */,
 				52B5C8FF1950337C00449E97 /* XYZAppDelegate.h */,
 				52B5C9001950337C00449E97 /* XYZAppDelegate.m */,
-				52B5C9021950337C00449E97 /* Images.xcassets */,
+				52B5C91F195034FD00449E97 /* LoginViewController.h */,
+				52B5C920195034FD00449E97 /* LoginViewController.m */,
+				52B5C921195034FD00449E97 /* LoginViewController.xib */,
+				522F10C41950AA7C0056ECD8 /* MoreViewController.h */,
+				522F10C51950AA7C0056ECD8 /* MoreViewController.m */,
+				522F10C61950AA7C0056ECD8 /* MoreViewController.xib */,
+				52B5C924195096E700449E97 /* FeedViewController.h */,
+				52B5C925195096E700449E97 /* FeedViewController.m */,
+				52B5C926195096E700449E97 /* FeedViewController.xib */,
 				52B5C8F71950337C00449E97 /* Supporting Files */,
 			);
 			path = facebooklogin;
@@ -220,8 +244,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522F10C81950AA7C0056ECD8 /* MoreViewController.xib in Resources */,
 				52B5C8FB1950337C00449E97 /* InfoPlist.strings in Resources */,
-				52B5C9031950337C00449E97 /* Images.xcassets in Resources */,
+				522F10C3195099EF0056ECD8 /* Images.xcassets in Resources */,
+				52B5C928195096E700449E97 /* FeedViewController.xib in Resources */,
+				52B5C923195034FD00449E97 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B5C9011950337C00449E97 /* XYZAppDelegate.m in Sources */,
+				52B5C922195034FD00449E97 /* LoginViewController.m in Sources */,
+				52B5C927195096E700449E97 /* FeedViewController.m in Sources */,
 				52B5C8FD1950337C00449E97 /* main.m in Sources */,
+				522F10C71950AA7C0056ECD8 /* MoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +468,7 @@
 				52B5C91B1950337C00449E97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52B5C91C1950337C00449E97 /* Build configuration list for PBXNativeTarget "facebookloginTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +477,7 @@
 				52B5C91E1950337C00449E97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
